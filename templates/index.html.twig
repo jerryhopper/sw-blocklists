@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div>
+    <h1>Surfwijzer Blockists</h1>
+    <p>Use these blocklists in your router or pi-hole.</p>
+    <ul>
+        {% for c in categories %}
+            <li><a href="/category/{{ c }}">{{ c }}</a></li>
+        {% endfor %}
+
+    </ul>
+</div>
+</body>
+</html>
